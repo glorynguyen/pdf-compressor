@@ -10,4 +10,6 @@ This is my custom batch file using Ghostscript to compress PDF files on Windows 
 ## How to install
 
 1. Copy the `filechooser.vbs` and `run.bat` files and put them in the same folder as the Ghostscript installed `bin` folder.
+![image](https://github.com/glorynguyen/pdf-compressor/assets/9473156/6f152788-6fea-462d-8172-a3f01068f237)
+
 2. Make a shortcut of the `run.bat` file and place it on the desktop
