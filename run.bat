@@ -50,7 +50,7 @@ rem write the output file path to the log file
 echo Output file: "%output%" >> "%logFile%" 2>&1
 
 rem run the gswin64.exe command with the input and output file parameters and log the output
-"C:\Program Files\gs\gs10.02.1\bin\gswin64.exe" -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile="%output%" "%~1" >> "%logFile%" 2>&1
+"C:\Program Files\gs\gs10.04.0\bin\gswin64.exe" -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile="%output%" "%~1" >> "%logFile%" 2>&1
 
 rem write the input file path to the log file
 echo Input file: "%~1" >> "%logFile%" 2>&1
@@ -59,7 +59,7 @@ goto END
 :NOINPUT
 rem call the filechooser.vbs file using cscript.exe and log the output
 for /f "delims=" %%I in ('cscript //nologo filechooser.vbs') do set "input=%%I"
-@REM set "input=C:\Program Files\gs\gs10.02.1\bin\test.pdf"
+@REM set "input=C:\Program Files\gs\gs10.04.0\bin\test.pdf"
 
 rem check if the user canceled the dialog
 if "%input%" == "" goto CANCEL
@@ -82,7 +82,7 @@ rem write the input file path to the log file
 echo Input file: "%input%" >> "%logFile%" 2>&1
 
 rem run the gswin64.exe command with the input and output file parameters and log the output
-"C:\Program Files\gs\gs10.02.1\bin\gswin64.exe" -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile="%output%" "%input%" >> "%logFile%" 2>&1
+"C:\Program Files\gs\gs10.04.0\bin\gswin64.exe" -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile="%output%" "%input%" >> "%logFile%" 2>&1
 goto END
 
 :CANCEL
@@ -95,4 +95,4 @@ goto END
 :END
 rem write the end of the execution to the log file
 echo [%DATE% %TIME%] Finished the batch file >> "%logFile%" 2>&1
-@REM "C:\Program Files\gs\gs10.02.1\bin\gswin64.exe" -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile="C:\Program Files\gs\gs10.02.1\bin\converted.pdf" "C:\Program Files\gs\gs10.02.1\bin\input.pdf"
+@REM "C:\Program Files\gs\gs10.04.0\bin\gswin64.exe" -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile="C:\Program Files\gs\gs10.04.0\bin\converted.pdf" "C:\Program Files\gs\gs10.04.0\bin\input.pdf"

@@ -8,7 +8,7 @@ Set objDialog = objWord.Application.FileDialog(3)
 
 ' Set the properties of the FileDialog object
 objDialog.Title = "Select a PDF file to convert"
-objDialog.InitialFileName = "C:\Program Files\gs\gs10.02.1\bin"
+objDialog.InitialFileName = "C:\Program Files\gs\gs10.04.0\bin"
 objDialog.Filters.Clear
 objDialog.Filters.Add "PDF Files", "*.pdf"
 

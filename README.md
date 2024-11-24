@@ -3,7 +3,7 @@ This is my custom batch file using Ghostscript to compress PDF files on Windows 
 
 ## Pre-required
 
-- Download and install the latest version of [ghostscript](https://ghostscript.com/releases/gsdnld.html)
+- Double click to the file `/bin/gs10040w64.exe` to install Ghostscript 10.04.0
 - This is only supported for Windows 10 and higher.
 - Your machine should have already installed the Word application (This snippet uses the Word application to open a file chooser).
 
